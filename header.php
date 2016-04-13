@@ -8,7 +8,7 @@
         </div>
         <div id="headerText">
             <a id="home" href="index">Home</a> / 
-            <a id="work" href="work">Our Work</a> /
+            <!--<a id="work" href="work">Our Work</a> /-->
             <a id="contact" href="contact">Contact us</a>
         </div>
     </div>
