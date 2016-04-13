@@ -1,2 +1,5 @@
 <div id="foot">
-</body>
+    <div id="tip">
+        
+    </div>
+</div>
