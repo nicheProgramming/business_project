@@ -12,18 +12,40 @@
 <body>
     <div id="page">
         <p id="first">
-            This is a simple paragraph that is meant to be nice 
-            and easy to type which is why there will be mommas no 
-            periods or any capital letters so i guess this means that 
-            it cannot really be considered a paragraph but just a 
-            series of run on sentences this should help you get faster
-            at typing as im trying not to use too many difficult words
-            in it although i think that i might start making it hard
-            by including some more difficult letters I'm typing pretty
-            quickly so forgive me for any mistakes i think that i will
-            not just tell you a story about the time i went to the zoo
-            and found a monkey and a fox playing together they
+            We can be found at the location marked on the map!
         </p>
+        <div id="map"></div>
+    	<script>
+    		function RandomLoc(){
+    			var lat = Math.floor(Math.random() * 180) + 1;
+    			var lng = Math.floor(Math.random() * 360) + 1;
+    			if (lat >= 90){
+    				lat = lat-90;
+    			} else if (lat < 90) {
+    				var dif = 90 - lat;
+    				lat = dif * -1;
+    			}
+    			var myLatLng = {lat: lat, lng: lng};
+    			var map = new google.maps.Map(document.getElementById('map'), {
+        			zoom: 5,
+        			center: myLatLng
+      			});
+    
+      			var marker = new google.maps.Marker({
+        			position: myLatLng,
+    				map: map,
+        			title: 'Hello World!',
+        // 			icon:'blob:https%3A//drive.google.com/5201cb7f-f571-4739-adff-92e1af43136c'
+      			});
+    		}
+    		
+    		window.onload = function (){
+    			RandomLoc();
+    			setTimeout(RandomLoc(), 9000);
+    		};
+    	</script>
+    	<script src="https://maps.googleapis.com/maps/api/js"
+    		async defer></script>
     </div>
 </body>
 

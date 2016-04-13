@@ -81,3 +81,16 @@ a:hover {
     text-align:center;
     font-weight:bold;
 }
+#first {
+    float:right;
+    margin:auto;
+}
+#map {
+    float:left;
+    margin-left:400px;
+    margin-right:150px;
+    margin-top:50px;
+    width: 400px;
+    height: 400px;
+    background-color: #CCC;
+}
